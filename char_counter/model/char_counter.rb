@@ -1,10 +1,8 @@
 class CharCounter
-  def initialize
-    @dic = Hash.new
-  end
+  def self.count(key)
+    dic = Hash.new()
+    dic[key]=1
+    dic
+    end
 
-  def count(clave)
-    @dic[clave] = 1
-    @dic
-  end
 end
