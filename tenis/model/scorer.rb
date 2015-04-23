@@ -8,7 +8,7 @@ class Scorer
 
   def add_point
     @point= @value[@counter]
-    @counter =+ 1
+    @counter += 1
   end
 
   def get_points

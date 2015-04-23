@@ -26,10 +26,18 @@ describe 'Score' do
     @score.get_result.should == result
   end
 
-  it 'should return 2 point player n°1 ' do
+  it 'should return 2 points player n°1 ' do
     @score.point_player_1
     @score.point_player_1
     result= "point(30-0) games(0-0) set(0-0)"
+    @score.get_result.should == result
+  end
+
+  it 'should return 3 points player n°1 ' do
+    @score.point_player_1
+    @score.point_player_1
+    @score.point_player_1
+    result= "point(40-0) games(0-0) set(0-0)"
     @score.get_result.should == result
   end
 
