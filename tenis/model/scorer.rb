@@ -8,15 +8,23 @@ class Scorer
   end
 
   def add_point
-    if @counter==3
-      @counter= 0
-      @point= 0
-      @game+= 1
-    else
-      @point= @value[@counter]
-      @counter += 1
-    end
+    @point= @value[@counter]
+    @counter += 1
   end
+
+  def add_game
+    @game += 1
+    reset_points
+  end
+
+  def win_game?
+    @counter == 3
+  end
+  def reset_points
+    @point = 0
+    @counter= 0
+  end
+
   def get_games
     @game.to_s
   end

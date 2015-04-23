@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b44d1959-9431-4c0f-8f67-400b7e2d6439" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/char_counter.iml" afterPath="$PROJECT_DIR$/.idea/char_counter.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/score.rb" afterPath="$PROJECT_DIR$/model/score.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/score_spec.rb" afterPath="$PROJECT_DIR$/spec/score_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/scorer.rb" afterPath="$PROJECT_DIR$/model/scorer.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../char_counter/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../char_counter/.idea/workspace.xml" />
@@ -20,7 +20,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/char_counter@Run_spec__score_spec___char_counter.coverage" NAME="Run spec 'score_spec': char_counter Coverage Results" MODIFIED="1429830591087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="char_counter" />
+    <SUITE FILE_PATH="coverage/char_counter@Run_spec__score_spec___char_counter.coverage" NAME="Run spec 'score_spec': char_counter Coverage Results" MODIFIED="1429832318768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="char_counter" />
     <SUITE FILE_PATH="coverage/char_counter@Run_spec__char_counter_spec___char_counter.coverage" NAME="Run spec 'char_counter_spec': char_counter Coverage Results" MODIFIED="1429210471499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="char_counter" />
     <SUITE FILE_PATH="coverage/char_counter@char_counter.coverage" NAME="char_counter Coverage Results" MODIFIED="1428094071944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" MODULE_NAME="char_counter" />
     <SUITE FILE_PATH="coverage/char_counter@Score_should_return_3_points_player_n_1___char_counter.coverage" NAME="Score should return 3 points player n°1 : char_counter Coverage Results" MODIFIED="1429830485166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="char_counter" />
@@ -40,8 +40,8 @@
       <file leaf-file-name="score_spec.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/score_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8178694" vertical-offset="347" max-vertical-offset="735">
-              <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.8453608" vertical-offset="624" max-vertical-offset="990">
+              <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -50,8 +50,8 @@
       <file leaf-file-name="score.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/score.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="435">
+              <caret line="11" column="26" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -60,8 +60,8 @@
       <file leaf-file-name="scorer.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/scorer.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="585">
+              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -78,8 +78,8 @@
         <option value="$PROJECT_DIR$/model/char_counter.rb" />
         <option value="$PROJECT_DIR$/spec/char_counter_spec.rb" />
         <option value="$PROJECT_DIR$/model/score.rb" />
-        <option value="$PROJECT_DIR$/spec/score_spec.rb" />
         <option value="$PROJECT_DIR$/model/scorer.rb" />
+        <option value="$PROJECT_DIR$/spec/score_spec.rb" />
       </list>
     </option>
   </component>
@@ -477,7 +477,19 @@
       <option name="project" value="LOCAL" />
       <updated>1429830211142</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="test sumar   tres puntos a jugador 1">
+      <created>1429830639037</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1429830639037</updated>
+    </task>
+    <task id="LOCAL-00011" summary="test sumar   1 game a jugador 1">
+      <created>1429831456824</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1429831456824</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -496,7 +508,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24598931" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24598931" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5387931" sideWeight="0.5958747" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -530,7 +542,9 @@
     <MESSAGE value="test sumar   un punto a jugador 1" />
     <MESSAGE value="test sumar   un punto a jugador 2" />
     <MESSAGE value="test sumar   dos puntos a jugador 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="test sumar   dos puntos a jugador 1" />
+    <MESSAGE value="test sumar   tres puntos a jugador 1" />
+    <MESSAGE value="test sumar   1 game a jugador 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="test sumar   1 game a jugador 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -660,26 +674,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/score.rb">
+    <entry file="file://$PROJECT_DIR$/model/scorer.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="585">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/scorer.rb">
+    <entry file="file://$PROJECT_DIR$/model/score.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="435">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/score_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8178694" vertical-offset="347" max-vertical-offset="735">
-          <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.8453608" vertical-offset="624" max-vertical-offset="990">
+          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
           <folding />
         </state>
       </provider>
