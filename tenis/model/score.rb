@@ -8,17 +8,11 @@ class Score
   end
 
   def point_player_1
-    if  @scorer_1.win_game?
-        @scorer_1.add_game
-        @scorer_2.reset_points
-    else
-      @scorer_1.add_point
-    end
-
+    @scorer_1.add_point(@scorer_2)
   end
 
   def point_player_2
-    @scorer_2.add_point
+    @scorer_2.add_point(@scorer_1)
   end
 
 end

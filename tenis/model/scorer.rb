@@ -6,8 +6,15 @@ class Scorer
     @counter= 0
     @value=[15,30,40]
   end
-
-  def add_point
+  def add_point(other_player)
+    if  self.win_game?
+      self.add_game
+      other_player.reset_points
+    else
+      self.add_simple_point
+    end
+  end
+  def add_simple_point
     @point= @value[@counter]
     @counter += 1
   end
