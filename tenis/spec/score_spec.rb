@@ -34,10 +34,18 @@ describe 'Score' do
   end
 
   it 'should return 3 points player n°1 ' do
-    @score.point_player_1
-    @score.point_player_1
-    @score.point_player_1
+    for i in 0..2
+      @score.point_player_1
+    end
     result= "point(40-0) games(0-0) set(0-0)"
+    @score.get_result.should == result
+  end
+
+  it 'should return 1 game player n°1 ' do
+    for i in 0..3
+        @score.point_player_1
+    end
+    result= "point(0-0) games(1-0) set(0-0)"
     @score.get_result.should == result
   end
 

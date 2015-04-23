@@ -4,7 +4,7 @@ class Score
     @scorer_2=Scorer.new(player_2)
   end
   def get_result
-     "point("+@scorer_1.get_points+"-"+@scorer_2.get_points+") games(0-0) set(0-0)"
+     "point("+@scorer_1.get_points+"-"+@scorer_2.get_points+") games("+@scorer_1.get_games+"-"+@scorer_2.get_games+") set(0-0)"
   end
 
   def point_player_1
