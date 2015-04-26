@@ -1,4 +1,5 @@
 class Scorer
+
   def initialize(name_player)
     @name=name_player
     @point=0
@@ -9,13 +10,12 @@ class Scorer
   end
 
   def add_point(other_player)
-    if  deuce?(other_player)
+    if deuce?(other_player)
       other_player.subtract_points
-    elsif self.win_game?(other_player)
-      self.add_game
-      other_player.reset_points
+    elsif win_game?(other_player)
+      add_game (other_player)
     else
-      self.add_simple_point
+      add_simple_point
     end
   end
 
@@ -32,9 +32,20 @@ class Scorer
     @counter += 1
   end
 
-  def add_game
-    @game += 1
+  def add_game(other_player)
+    if win_set?
+      @set +=1
+      reset_games
+      other_player.reset_games
+    else
+      @game += 1
+    end
     reset_points
+    other_player.reset_points
+  end
+
+  def reset_general_points(other_player)
+    reset_games
   end
 
   def win_game?(other_player)
@@ -42,10 +53,10 @@ class Scorer
   end
 
   def win_advantage?(other_player)
-    @point.equal?("AD") && other_player == 40
+      deuce?(other_player) && other_player == 40
   end
   def win_set?
-    @game == 6
+    @game == 5
   end
 
   def reset_games
@@ -69,4 +80,5 @@ class Scorer
   def get_sets
     @set
   end
+
 end

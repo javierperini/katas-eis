@@ -67,13 +67,19 @@ describe 'Score' do
   end
 
   it 'should return  point player n°2  if advantage player n°1' do
-    for i in 0..2
+    for i in 0..3
+      @score.point_player_1
       @score.point_player_2
+    end
+    result= "point(40-40) games(0-0) set(0-0)"
+    @score.get_result.should == result
+  end
+
+  it 'should return  1 set player n°1' do
+    for i in 0..23
       @score.point_player_1
     end
-    @score.point_player_1
-    @score.point_player_2
-    result= "point(40-40) games(0-0) set(0-0)"
+    result= "point(0-0) games(0-0) set(1-0)"
     @score.get_result.should == result
   end
 
