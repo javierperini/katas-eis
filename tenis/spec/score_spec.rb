@@ -13,14 +13,12 @@ describe 'Score' do
   end
 
   it 'should return point player n°1 ' do
-  ##allow(Scorer).to receive(:get_points).and_return("15") ARREGLAR MOCK
     @score.point_player_1
     result= "point(15-0) games(0-0) set(0-0)"
     @score.get_result.should == result
   end
 
   it 'should return point player n°2 ' do
-    ##allow(Scorer).to receive(:get_points).and_return("15") ARREGLAR MOCK
     @score.point_player_2
     result= "point(0-15) games(0-0) set(0-0)"
     @score.get_result.should == result
@@ -55,6 +53,16 @@ describe 'Score' do
       @score.point_player_1
     end
     result= "point(0-0) games(1-0) set(0-0)"
+    @score.get_result.should == result
+  end
+
+  it 'should return  advantage player n°1' do
+    for i in 0..2
+      @score.point_player_2
+      @score.point_player_1
+    end
+    @score.point_player_1
+    result= "point(AD-40) games(0-0) set(0-0)"
     @score.get_result.should == result
   end
 
