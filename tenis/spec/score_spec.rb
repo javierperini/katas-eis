@@ -66,4 +66,15 @@ describe 'Score' do
     @score.get_result.should == result
   end
 
+  it 'should return  point player n°2  if advantage player n°1' do
+    for i in 0..2
+      @score.point_player_2
+      @score.point_player_1
+    end
+    @score.point_player_1
+    @score.point_player_2
+    result= "point(40-40) games(0-0) set(0-0)"
+    @score.get_result.should == result
+  end
+
 end

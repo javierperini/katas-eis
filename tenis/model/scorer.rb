@@ -9,11 +9,11 @@ class Scorer
   end
 
   def add_point(other_player)
-    if  self.win_game?(other_player)
+    if  deuce?(other_player)
+      other_player.subtract_points
+    elsif self.win_game?(other_player)
       self.add_game
       other_player.reset_points
-    elsif deuce?(other_player)
-      other_player.subtract_points
     else
       self.add_simple_point
     end
@@ -24,8 +24,7 @@ class Scorer
   end
 
   def subtract_points
-    @counter -= 1
-    @point= @value[@counter]
+    @point= 40
   end
 
   def add_simple_point
@@ -39,7 +38,7 @@ class Scorer
   end
 
   def win_game?(other_player)
-    @counter >= 3 && other_player.get_points < 40 || win_advantage?(other_player)
+     win_advantage?(other_player) || @counter >= 3 && other_player.get_points < 40
   end
 
   def win_advantage?(other_player)
