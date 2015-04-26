@@ -9,26 +9,26 @@ describe 'Score' do
   end
   it 'should return score initialized ' do
     result= "point(0-0) games(0-0) set(0-0)"
-    @score.get_result.should == result
+    expect(@score.get_result).to eq result
   end
 
   it 'should return point player n°1 ' do
     @score.point_player_1
     result= "point(15-0) games(0-0) set(0-0)"
-    @score.get_result.should == result
+    expect(@score.get_result).to eq result
   end
 
   it 'should return point player n°2 ' do
     @score.point_player_2
     result= "point(0-15) games(0-0) set(0-0)"
-    @score.get_result.should == result
+    expect(@score.get_result).to eq result
   end
 
   it 'should return 2 points player n°1 ' do
     @score.point_player_1
     @score.point_player_1
     result= "point(30-0) games(0-0) set(0-0)"
-    @score.get_result.should == result
+    expect(@score.get_result).to eq result
   end
 
   it 'should return 3 points player n°1 ' do
@@ -36,7 +36,7 @@ describe 'Score' do
       @score.point_player_1
     end
     result= "point(40-0) games(0-0) set(0-0)"
-    @score.get_result.should == result
+    expect(@score.get_result).to eq result
   end
 
   it 'should return 1 game player n°1 ' do
@@ -44,7 +44,7 @@ describe 'Score' do
         @score.point_player_1
     end
     result= "point(0-0) games(1-0) set(0-0)"
-    @score.get_result.should == result
+    expect(@score.get_result).to eq result
   end
 
   it 'should return 1 game player n°1 and reset points player n° 2' do
@@ -53,7 +53,7 @@ describe 'Score' do
       @score.point_player_1
     end
     result= "point(0-0) games(1-0) set(0-0)"
-    @score.get_result.should == result
+    expect(@score.get_result).to eq result
   end
 
   it 'should return  advantage player n°1' do
@@ -63,7 +63,7 @@ describe 'Score' do
     end
     @score.point_player_1
     result= "point(AD-40) games(0-0) set(0-0)"
-    @score.get_result.should == result
+    expect(@score.get_result).to eq result
   end
 
   it 'should return  point player n°2  if advantage player n°1' do
@@ -72,7 +72,7 @@ describe 'Score' do
       @score.point_player_2
     end
     result= "point(40-40) games(0-0) set(0-0)"
-    @score.get_result.should == result
+    expect(@score.get_result).to eq result
   end
 
   it 'should return  1 set player n°1' do
@@ -80,7 +80,15 @@ describe 'Score' do
       @score.point_player_1
     end
     result= "point(0-0) games(0-0) set(1-0)"
-    @score.get_result.should == result
+    expect(@score.get_result).to eq result
+  end
+
+  it 'should return  winner is player n°1' do
+    for i in 0..46
+      @score.point_player_1
+    end
+    result= "Winner is Player 1"
+    expect(@score.get_result).to eq result
   end
 
 end
