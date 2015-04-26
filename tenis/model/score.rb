@@ -4,7 +4,12 @@ class Score
     @scorer_2= Scorer.new(player_2)
   end
   def get_result
-     "point("+get_point+") games("+get_game+") set("+get_set+")"
+    if @scorer_1.win_match?(@scorer_2)
+      return "Winner is " + @scorer_1.get_name
+    elsif @scorer_2.win_match?(@scorer_1)
+      return "Winner is " + @scorer_2.get_name
+    end
+    "point("+get_point+") games("+get_game+") set("+get_set+")"
   end
 
   def get_set

@@ -19,6 +19,10 @@ class Scorer
     end
   end
 
+  def get_name
+    @name
+  end
+
   def deuce?(other_player)
      other_player.get_points == "AD"
   end
@@ -34,9 +38,7 @@ class Scorer
 
   def add_game(other_player)
     if win_set?
-      @set +=1
-      reset_games
-      other_player.reset_games
+      add_set(other_player)
     else
       @game += 1
     end
@@ -44,8 +46,14 @@ class Scorer
     other_player.reset_points
   end
 
-  def reset_general_points(other_player)
+  def add_set(other_player)
+    @set +=1
     reset_games
+    other_player.reset_games
+  end
+
+  def win_match?(other_player)
+    @set== 1 && @game ==5 && @point == 40 && !deuce?(other_player)
   end
 
   def win_game?(other_player)
@@ -80,5 +88,4 @@ class Scorer
   def get_sets
     @set
   end
-
 end
