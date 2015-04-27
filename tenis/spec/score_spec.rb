@@ -4,7 +4,7 @@ require_relative '../model/scorer.rb'
 
 describe 'Score' do
   before do
-    @score= Score.new("Player 1", "Player 2")
+    @score= Score.new('Player 1', 'Player 2')
   end
 
   it 'should return score initialized ' do
