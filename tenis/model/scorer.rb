@@ -61,7 +61,7 @@ class Scorer
   end
 
   def win_advantage?(other_player)
-      deuce?(other_player) && other_player == 40
+      deuce?(other_player) && other_player.get_points == 40
   end
   def win_set?
     @game == 5

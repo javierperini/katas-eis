@@ -5,8 +5,8 @@ require_relative '../model/scorer.rb'
 describe 'Score' do
   before do
     @score= Score.new("Player 1", "Player 2")
-
   end
+
   it 'should return score initialized ' do
     result= "point(0-0) games(0-0) set(0-0)"
     expect(@score.get_result).to eq result
