@@ -6,7 +6,7 @@ class Scorer
     @set= 0
     @game= 0
     @counter= 0
-    @value=[15,30,40,"AD"]
+    @value=[15,30,40,'AD']
   end
 
   def add_point(other_player)
@@ -24,7 +24,7 @@ class Scorer
   end
 
   def deuce?(other_player)
-     other_player.get_points == "AD"
+    other_player.get_points == 'AD'
   end
 
   def subtract_points
@@ -57,19 +57,19 @@ class Scorer
   end
 
   def win_game?(other_player)
-     win_advantage?(other_player) || @counter >= 3 && other_player.get_points < 40
+    win_advantage?(other_player) || @counter >= 3 && other_player.get_points < 40
   end
 
   def win_advantage?(other_player)
-      deuce?(other_player) && other_player.get_points == 40
+    deuce?(other_player) && other_player.get_points == 40
   end
   def win_set?
     @game == 5
   end
 
   def reset_games
-     @game = 0
-     reset_points
+    @game = 0
+    reset_points
   end
 
   def reset_points

@@ -3,24 +3,25 @@ class Score
     @scorer_1= Scorer.new(player_1)
     @scorer_2= Scorer.new(player_2)
   end
+
   def get_result
     if @scorer_1.win_match?(@scorer_2)
-      return "Winner is " + @scorer_1.get_name
+      return 'Winner is ' + @scorer_1.get_name
     elsif @scorer_2.win_match?(@scorer_1)
-      return "Winner is " + @scorer_2.get_name
+      return 'Winner is ' + @scorer_2.get_name
     end
-    "point("+get_point+") games("+get_game+") set("+get_set+")"
+    'point('+get_point+') games('+get_game+') set('+get_set+')'
   end
 
   def get_set
-    @scorer_1.get_sets.to_s+"-"+@scorer_2.get_sets.to_s
+    @scorer_1.get_sets.to_s+'-'+@scorer_2.get_sets.to_s
   end
   def get_game
-    @scorer_1.get_games.to_s+"-"+@scorer_2.get_games.to_s
+    @scorer_1.get_games.to_s+'-'+@scorer_2.get_games.to_s
   end
 
   def get_point
-    @scorer_1.get_points.to_s+"-"+@scorer_2.get_points.to_s
+    @scorer_1.get_points.to_s+'-'+@scorer_2.get_points.to_s
   end
 
   def point_player_1
