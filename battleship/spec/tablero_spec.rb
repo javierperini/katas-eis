@@ -10,4 +10,8 @@ describe 'Tablero' do
     expect(@tablero.get_ancho).to eq 5
   end
 
+  it 'compruebo que el alto del tablero es 5' do
+    expect(@tablero.get_alto).to eq 5
+  end
+
 end

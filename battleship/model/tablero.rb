@@ -8,4 +8,8 @@ class Tablero
     @ancho
   end
 
+  def get_alto
+    @alto
+  end
+
 end
