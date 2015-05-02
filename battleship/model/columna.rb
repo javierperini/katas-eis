@@ -15,5 +15,17 @@ class Columna
     @lista_filas[nro_fila]
   end
 
+  def guarda_barco_chico_en(fila)
+     get_fila(fila).guardar_barco
+  end
+
+  def guarda_barco_grande_en(fila_ini, fila_fin)
+    get_fila(fila_ini).guardar_barco
+    get_fila(fila_fin).guardar_barco
+  end
+
+  def esta_ocupada_en?(nro_fila)
+    get_fila(nro_fila).esta_ocupada?
+  end
 
 end

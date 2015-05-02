@@ -26,25 +26,18 @@ class Tablero
   end
 
   def crear_barco_chico(columna, fila)
-      fila = get_fila_en_columna(columna, fila)
-      fila.guardar_barco
+    columna= get_columna(columna)
+    columna.guarda_barco_chico_en(fila)
   end
 
   def crear_barco_grande(columna, fila)
-    fila_1 = get_fila_en_columna(columna, fila)
-    fila_2 = get_fila_en_columna(columna, fila+1)
-    fila_1.guardar_barco
-    fila_2.guardar_barco
-  end
-
-  def get_fila_en_columna(columna, fila)
-    columna=get_columna(columna)
-    columna.get_fila(fila)
+    columna= get_columna(columna)
+    columna.guarda_barco_grande_en(fila,fila+1)
   end
 
   def posicion_ocupada?(nro_columna,nro_fila)
-      fila= get_fila_en_columna(nro_columna, nro_fila)
-      fila.esta_ocupada?
+      columna= get_columna(nro_columna)
+      columna.esta_ocupada_en?(nro_fila)
   end
 
 end

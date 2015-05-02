@@ -26,6 +26,4 @@ describe 'Tablero' do
     expect(@tablero.posicion_ocupada?(5,1)).to be true
   end
 
-
-
 end
