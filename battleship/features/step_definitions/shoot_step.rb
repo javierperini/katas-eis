@@ -14,5 +14,10 @@ Then(/^I get hit$/) do
   expect(@tablero.es_hit).to eq 1
 end
 
+Then(/^I get water$/) do
+  expect(@tablero.es_hit).to eq 0
+end
+
+
 
 
