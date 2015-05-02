@@ -11,4 +11,11 @@ class Fila
     @ocupada= true
   end
 
+  def disparar
+    if(@ocupada && true)
+      return 1
+    end
+    0
+  end
+
 end

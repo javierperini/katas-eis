@@ -4,6 +4,7 @@ class Tablero
     @columnas= columnas
     @filas= filas
     @lista_columnas= []
+    @hit=0
     crear_tablero
   end
 
@@ -38,6 +39,15 @@ class Tablero
   def posicion_ocupada?(nro_columna,nro_fila)
       columna= get_columna(nro_columna)
       columna.esta_ocupada_en?(nro_fila)
+  end
+
+  def disparar_posicion(nro_columna, nro_fila)
+    columna= get_columna(nro_columna)
+    @hit += columna.disparar_fila(nro_fila)
+  end
+
+  def es_hit()
+    @hit
   end
 
 end
