@@ -15,7 +15,7 @@ Given(/^I create a large ship in position "(\d+):(\d+)"$/) do |posicionX ,posici
 end
 
 Then(/^position "(\d+):(\d+)" is not empty$/) do |posicionX, posicionY|
-  expect(@tablero.posicion_ocupada?(posicionX.to_i,posicionY.to_i)).to eq(true)
+  expect(@tablero.posicion_ocupada?(posicionX.to_i,posicionY.to_i)).to be (true)
 end
 
 
