@@ -21,9 +21,14 @@ describe 'Tablero' do
     expect(@tablero.posicion_ocupada?(5,1)).to be true
   end
 
-  it 'crear un barco grande y comprobar que una posicion esta ocupada' do
+  it 'crear un barco grande y comprobar que una posicion inicial esta ocupada' do
     @tablero.crear_barco_grande(5,1)
     expect(@tablero.posicion_ocupada?(5,1)).to be true
+  end
+
+  it 'crear un barco grande y comprobar que una posicion final esta ocupada' do
+    @tablero.crear_barco_grande(5,1)
+    expect(@tablero.posicion_ocupada?(5,2)).to be true
   end
 
 end
