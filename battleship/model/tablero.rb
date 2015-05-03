@@ -5,13 +5,14 @@ class Tablero
     @filas= filas
     @lista_columnas= []
     @hit=0
+    @lista_barcos= []
     crear_tablero
   end
 
   def crear_tablero()
-     for i in 1..@columnas
-        @lista_columnas[i]= Columna.new(@filas)
-     end
+    for i in 1..@columnas
+       @lista_columnas[i]=Columna.new(@filas)
+    end
   end
 
   def get_columnas
@@ -27,13 +28,15 @@ class Tablero
   end
 
   def crear_barco_chico(columna, fila)
+    @lista_barcos += [BarcoChico.new(columna,fila)]
     columna= get_columna(columna)
-    columna.guarda_barco_chico_en(fila)
+    columna.guardar_barco_chico_en(fila)
   end
 
   def crear_barco_grande(columna, fila)
+    @lista_barcos += [BarcoGrande.new(columna,fila)]
     columna= get_columna(columna)
-    columna.guarda_barco_grande_en(fila,fila+1)
+    columna.guardar_barco_grande_en(fila,fila+1)
   end
 
   def posicion_ocupada?(nro_columna,nro_fila)
@@ -49,5 +52,10 @@ class Tablero
   def es_hit()
     @hit
   end
+
+  def hundi_barco?()
+    @cant_barcos_actual < @cant_barcos_total
+  end
+
 
 end

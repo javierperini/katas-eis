@@ -2,6 +2,7 @@ require 'rspec'
 require_relative '../model/tablero.rb'
 require_relative '../model/columna.rb'
 require_relative '../model/fila.rb'
+require_relative '../model/barco.rb'
 
 describe 'Tablero' do
   before do
@@ -37,6 +38,8 @@ describe 'Tablero' do
     expect(@tablero.es_hit).to eq 1
   end
 
-
-
+  it 'disparar a una posicion y retornar un miss' do
+    @tablero.disparar_posicion(2,5)
+    expect(@tablero.es_hit).to eq 0
+  end
 end

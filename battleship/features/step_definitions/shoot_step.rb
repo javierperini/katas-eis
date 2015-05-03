@@ -19,5 +19,12 @@ Then(/^I get water$/) do
 end
 
 
+Then(/^I get sink$/) do
+
+end
+
+
+
+
 
 
