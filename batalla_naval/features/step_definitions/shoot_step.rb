@@ -13,7 +13,7 @@ Given(/^I shoot to position “(\d+):(\d+)”$/) do |posicionX, posicionY|
 end
 
 Then(/^I get water$/) do
-  pending # express the regexp above with the code you wish you had
+  expect(@tablero.es_miss?).to be true
 end
 
 Then(/^I get hit$/) do
