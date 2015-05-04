@@ -41,7 +41,7 @@ describe 'Tablero' do
     expect(@tablero.es_hit?).to be true
   end
 
-  it 'disparar a una posicion y retornar un miss' do
+  it 'disparar a una posicion y  retornar un miss' do
     @tablero.disparar_posicion(2,5)
     expect(@tablero.es_miss?).to be true
   end
