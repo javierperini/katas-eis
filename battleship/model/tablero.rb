@@ -63,5 +63,8 @@ class Tablero
     @disparo_actual.miss?
   end
 
+  def hundi_barco?()
+    @disparo_actual.sink?
+  end
 
 end

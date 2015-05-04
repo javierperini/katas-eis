@@ -14,7 +14,8 @@ class Disparo
   end
 
   def le_pegue_a_barco(barco, nro_columna, nro_fila)
-    barco.rebici_un_disparo(nro_columna, nro_columna)
+    barco.rebici_un_disparo(nro_columna, nro_fila)
+    @sink= barco.me_hundieron?
     @hit=true
     @tablero.sacar_punto(nro_columna, nro_fila)
   end
