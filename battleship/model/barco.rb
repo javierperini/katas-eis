@@ -6,12 +6,13 @@ class Barco
   end
 
   def rebici_un_disparo(nro_columna,nro_fila)
-     @hundido=@columna == nro_columna && @fila ==nro_fila
+     @hundido=estas_en?(nro_columna, nro_fila)
   end
 
-  def me_hundi?
-      @hundido
+  def estas_en?(nro_columna, nro_fila)
+    @columna == nro_columna && @fila ==nro_fila
   end
+
 end
 
 class BarcoChico<Barco
@@ -30,6 +31,11 @@ class BarcoGrande<Barco
     if @fila == nro_fila
       @fila= @fila_final
     end
-    @hundido=@columna == nro_columna && @fila ==nro_fila
+    @fila_final= 0
+    @hundido= estas_en?(nro_columna,nro_fila)&& @fila_final==0
+  end
+
+  def estas_en?(nro_columna, nro_fila)
+    @columna == nro_columna && @fila ==nro_fila
   end
 end

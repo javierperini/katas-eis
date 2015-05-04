@@ -11,7 +11,7 @@ class Fila
     @ocupada= true
   end
 
-  def disparar
+  def sacar
     if(@ocupada && true)
       return 1
     end

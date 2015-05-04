@@ -28,8 +28,8 @@ class Columna
     get_fila(nro_fila).esta_ocupada?
   end
 
-  def disparar_fila(nro_fila)
-    get_fila(nro_fila).disparar
+  def sacar_punto_fila(nro_fila)
+    get_fila(nro_fila).sacar
   end
 
 end

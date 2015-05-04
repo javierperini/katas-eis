@@ -3,6 +3,7 @@ require_relative '../model/tablero.rb'
 require_relative '../model/columna.rb'
 require_relative '../model/fila.rb'
 require_relative '../model/barco.rb'
+require_relative '../model/disparo.rb'
 
 describe 'Tablero' do
   before do
@@ -35,11 +36,11 @@ describe 'Tablero' do
 
   it 'disparar a una posicion y retornar un hit' do
     @tablero.disparar_posicion(2,1)
-    expect(@tablero.es_hit).to eq 1
+    expect(@tablero.es_hit?).to be true
   end
 
   it 'disparar a una posicion y retornar un miss' do
     @tablero.disparar_posicion(2,5)
-    expect(@tablero.es_hit).to eq 0
+    expect(@tablero.es_miss?).to be true
   end
 end

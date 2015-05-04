@@ -4,7 +4,6 @@ class Tablero
     @columnas= columnas
     @filas= filas
     @lista_columnas= []
-    @hit=0
     @lista_barcos= []
     crear_tablero
   end
@@ -14,7 +13,9 @@ class Tablero
        @lista_columnas[i]=Columna.new(@filas)
     end
   end
-
+  def get_barcos
+    @lista_barcos
+  end
   def get_columnas
     @columnas
   end
@@ -28,13 +29,13 @@ class Tablero
   end
 
   def crear_barco_chico(columna, fila)
-    @lista_barcos += [BarcoChico.new(columna,fila)]
+    @lista_barcos.push(BarcoChico.new(columna,fila))
     columna= get_columna(columna)
     columna.guardar_barco_chico_en(fila)
   end
 
   def crear_barco_grande(columna, fila)
-    @lista_barcos += [BarcoGrande.new(columna,fila)]
+    @lista_barcos.push(BarcoGrande.new(columna,fila))
     columna= get_columna(columna)
     columna.guardar_barco_grande_en(fila,fila+1)
   end
@@ -45,16 +46,21 @@ class Tablero
   end
 
   def disparar_posicion(nro_columna, nro_fila)
+    @disparo_actual= Disparo.new(self)
+    @disparo_actual.dispara(nro_columna,nro_fila)
+  end
+
+  def sacar_punto(nro_columna, nro_fila)
     columna= get_columna(nro_columna)
-    @hit += columna.disparar_fila(nro_fila)
+    columna.sacar_punto_fila(nro_fila)
   end
 
-  def es_hit()
-    @hit
+  def es_hit?
+    @disparo_actual.hit?
   end
 
-  def hundi_barco?()
-    @cant_barcos_actual < @cant_barcos_total
+  def es_miss?
+    @disparo_actual.miss?
   end
 
 
