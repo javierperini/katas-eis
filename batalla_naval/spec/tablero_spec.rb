@@ -4,8 +4,7 @@ require_relative '../model/columna.rb'
 require_relative '../model/fila.rb'
 require_relative '../model/barco.rb'
 require_relative '../model/disparo.rb'
-
-
+require_relative '../model/estado_barco.rb'
 
 describe 'Tablero' do
   before do
@@ -46,5 +45,10 @@ describe 'Tablero' do
     expect(@tablero.es_miss?).to be true
   end
 
+  it 'disparar hasta hundir un barco y retornar un sink' do
+    @tablero.disparar_posicion(2,1)
+    @tablero.disparar_posicion(2,2)
+    expect(@tablero.hundi_barco?).to be true
+  end
 end
 

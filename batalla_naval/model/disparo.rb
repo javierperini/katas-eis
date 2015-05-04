@@ -4,6 +4,7 @@ class Disparo
     @lista_barcos= tablero.get_barcos
     @hit= false
     @miss= false
+    @sink=false
   end
 
   def dispara(nro_columna,nro_fila)
@@ -15,6 +16,7 @@ class Disparo
   def le_pegue_a_barco(barco, nro_columna, nro_fila)
     barco.rebici_un_disparo(nro_columna, nro_fila)
     @hit=true
+    @sink= barco.me_hundieron?
     @tablero.sacar_punto(nro_columna, nro_fila)
   end
 
@@ -25,5 +27,7 @@ class Disparo
   def miss?
     @miss
   end
-
+  def sink?
+    @sink
+  end
 end

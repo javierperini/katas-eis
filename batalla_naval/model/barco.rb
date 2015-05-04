@@ -5,14 +5,29 @@ class Barco
     @hundido=false
   end
 
-  def estas_en?(nro_columna, nro_fila)
-    @columna == nro_columna && @fila ==nro_fila
-  end
-
   def rebici_un_disparo(nro_columna,nro_fila)
     @hundido=estas_en?(nro_columna, nro_fila)
   end
 
+  def get_fila
+    @fila
+  end
+
+  def set_fila(nro_fila)
+    @fila=nro_fila
+  end
+
+  def estas_en?(nro_columna, nro_fila)
+    @columna == nro_columna && @fila ==nro_fila
+  end
+
+  def set_hundido(boolean)
+    @hundido=boolean
+  end
+
+  def me_hundieron?
+    @hundido
+  end
 end
 
 class BarcoChico<Barco
@@ -25,5 +40,18 @@ class BarcoGrande<Barco
   def initialize(columna,fila)
     super(columna,fila)
     @fila_final= fila+1
+    @estado= Entero.new(self)
+  end
+
+  def rebici_un_disparo(nro_columna,nro_fila)
+    @estado.rebici_un_disparo(nro_columna,nro_fila)
+  end
+
+  def set_estado(estado_barco)
+    @estado= estado_barco
+  end
+
+  def estas_en?(nro_columna, nro_fila)
+    @columna == nro_columna && @fila ==nro_fila || @fila_final==nro_fila
   end
 end
