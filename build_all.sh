@@ -7,4 +7,6 @@ cd ../tenis
 bundle exec rake
 cd ../battleship
 bundle exec rake
+cd ../batalla_naval
+bundle exec rake
 
