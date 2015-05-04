@@ -34,6 +34,12 @@ class Tablero
     columna.guardar_barco_chico_en(fila)
   end
 
+  def crear_barco_grande(columna, fila)
+    @lista_barcos.push(BarcoGrande.new(columna,fila))
+    columna= get_columna(columna)
+    columna.guardar_barco_grande_en(fila,fila+1)
+  end
+
   def posicion_ocupada?(nro_columna,nro_fila)
     columna= get_columna(nro_columna)
     columna.esta_ocupada_en?(nro_fila)

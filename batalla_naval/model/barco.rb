@@ -10,3 +10,10 @@ class BarcoChico<Barco
     super(columna,fila)
   end
 end
+
+class BarcoGrande<Barco
+  def initialize(columna,fila)
+    super(columna,fila)
+    @fila_final= fila+1
+  end
+end
