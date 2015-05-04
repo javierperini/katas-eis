@@ -11,3 +11,7 @@ end
 Given(/^I shoot to position “(\d+):(\d+)”$/) do |posicionX, posicionY|
   @tablero.disparar_posicion(posicionX.to_i,posicionY.to_i)
 end
+
+Then(/^I get hit$/) do
+  expect(@tablero.es_hit?).to be true
+end
