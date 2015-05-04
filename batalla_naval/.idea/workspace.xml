@@ -56,8 +56,10 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/../battleship/app/models/objeto_loco.rb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../battleship/app/app.rb" afterPath="$PROJECT_DIR$/../battleship/app/app.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../battleship/model/barco.rb" afterPath="$PROJECT_DIR$/../battleship/model/barco.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../build_all.sh" afterPath="$PROJECT_DIR$/../build_all.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tenis/.idea/char_counter.iml" afterPath="$PROJECT_DIR$/../tenis/.idea/char_counter.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../battleship/model/tablero.rb" afterPath="$PROJECT_DIR$/../battleship/model/tablero.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../char_counter/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../char_counter/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tenis/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../tenis/.idea/workspace.xml" />
     </list>
@@ -85,17 +87,17 @@
     <SUITE FILE_PATH="coverage/char_counter@Tablero_crear_un_barco_y_comprobar_que_una_posicion_esta_ocupada__char_counter.coverage" NAME="Tablero crear un barco y comprobar que una posicion esta ocupada: char_counter Coverage Results" MODIFIED="1430587181094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="char_counter" />
     <SUITE FILE_PATH="coverage/char_counter@Score_should_return__point_player_n_2__if_advantage_player_n_1__char_counter.coverage" NAME="Score should return  point player n°2  if advantage player n°1: char_counter Coverage Results" MODIFIED="1430078814447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="char_counter" />
     <SUITE FILE_PATH="coverage/char_counter@battleship__char_counter.coverage" NAME="battleship: char_counter Coverage Results" MODIFIED="1430424765982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="char_counter" />
-    <SUITE FILE_PATH="coverage/char_counter@Run_spec__tablero_spec___char_counter.coverage" NAME="Run spec 'tablero_spec': char_counter Coverage Results" MODIFIED="1430757033440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="char_counter" />
     <SUITE FILE_PATH="coverage/char_counter@Tablero_crear_un_barco_grande_y_comprobar_que_su_posicion_final_esta_ocupada__char_counter.coverage" NAME="Tablero crear un barco grande y comprobar que su posicion final esta ocupada: char_counter Coverage Results" MODIFIED="1430713691142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="char_counter" />
+    <SUITE FILE_PATH="coverage/char_counter@Run_spec__tablero_spec___char_counter.coverage" NAME="Run spec 'tablero_spec': char_counter Coverage Results" MODIFIED="1430757033440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="char_counter" />
     <SUITE FILE_PATH="coverage/char_counter@Tablero_crear_un_barco_chico_y_comprobar_que_una_posicion_esta_ocupada__char_counter.coverage" NAME="Tablero crear un barco chico y comprobar que una posicion esta ocupada: char_counter Coverage Results" MODIFIED="1430697629637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="char_counter" />
     <SUITE FILE_PATH="coverage/char_counter@tablero.coverage" NAME="tablero Coverage Results" MODIFIED="1430681199298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" MODULE_NAME="char_counter" />
-    <SUITE FILE_PATH="coverage/char_counter@Tablero_compruebo_que_la_cantidad_de_filas_del_tablero_es_5__char_counter.coverage" NAME="Tablero compruebo que la cantidad de filas del tablero es 5: char_counter Coverage Results" MODIFIED="1430696874389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="char_counter" />
     <SUITE FILE_PATH="coverage/char_counter@Tablero_crear_un_barco_grande_y_comprobar_que_su_posicion_inicial_esta_ocupada__char_counter.coverage" NAME="Tablero crear un barco grande y comprobar que su posicion inicial esta ocupada: char_counter Coverage Results" MODIFIED="1430705629579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="char_counter" />
+    <SUITE FILE_PATH="coverage/char_counter@Tablero_compruebo_que_la_cantidad_de_filas_del_tablero_es_5__char_counter.coverage" NAME="Tablero compruebo que la cantidad de filas del tablero es 5: char_counter Coverage Results" MODIFIED="1430696874389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="char_counter" />
     <SUITE FILE_PATH="coverage/char_counter@Score_should_return_score_initialized___char_counter.coverage" NAME="Score should return score initialized : char_counter Coverage Results" MODIFIED="1430092311260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="char_counter" />
     <SUITE FILE_PATH="coverage/char_counter@Score_should_return__advantage_player_n_1__char_counter.coverage" NAME="Score should return  advantage player n°1: char_counter Coverage Results" MODIFIED="1430078267503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="char_counter" />
     <SUITE FILE_PATH="coverage/char_counter@battleship_step.coverage" NAME="battleship_step Coverage Results" MODIFIED="1430590751845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/features/step_definitions" MODULE_NAME="char_counter" />
-    <SUITE FILE_PATH="coverage/char_counter@Tablero_disparar_hasta_hundir_un_barco__y_retornar_un_sink__char_counter.coverage" NAME="Tablero disparar hasta hundir un barco  y retornar un sink: char_counter Coverage Results" MODIFIED="1430682007491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="char_counter" />
     <SUITE FILE_PATH="coverage/char_counter@Score_should_return_3_points_player_n_1___char_counter.coverage" NAME="Score should return 3 points player n°1 : char_counter Coverage Results" MODIFIED="1429830485166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="char_counter" />
+    <SUITE FILE_PATH="coverage/char_counter@Tablero_disparar_hasta_hundir_un_barco__y_retornar_un_sink__char_counter.coverage" NAME="Tablero disparar hasta hundir un barco  y retornar un sink: char_counter Coverage Results" MODIFIED="1430682007491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="char_counter" />
     <SUITE FILE_PATH="coverage/char_counter@Tablero_disparar_hasta_hundir_un_barco_y_retornar_un_sink__char_counter.coverage" NAME="Tablero disparar hasta hundir un barco y retornar un sink: char_counter Coverage Results" MODIFIED="1430713699096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="char_counter" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -113,8 +115,8 @@
       <file leaf-file-name="tablero_spec.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/tablero_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43636364" vertical-offset="0" max-vertical-offset="375">
-              <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.3732504" vertical-offset="0" max-vertical-offset="643">
+              <caret line="16" column="5" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -133,7 +135,7 @@
       <file leaf-file-name="battleship_step.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/step_definitions/battleship_step.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+            <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="255">
               <caret line="7" column="3" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="3" />
               <folding />
             </state>
@@ -143,7 +145,7 @@
       <file leaf-file-name="tablero.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/tablero.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+            <state vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="510">
               <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
               <folding />
             </state>
@@ -228,66 +230,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="batalla_naval" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="char_counter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batalla_naval" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="char_counter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batalla_naval" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="char_counter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batalla_naval" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="features" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="char_counter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batalla_naval" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="features" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="step_definitions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -895,9 +837,9 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27553445" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28028503" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39821693" sideWeight="0.6595408" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5468053" sideWeight="0.5954078" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5468053" sideWeight="0.5954078" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6359584" sideWeight="0.40459225" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -928,9 +870,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25732383" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.48291233" sideWeight="0.5954078" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -982,6 +924,38 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/spec/tablero_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/battleship.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/step_definitions/battleship_step.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="255">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/tablero.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="510">
+          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/spec/tablero_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="167" max-vertical-offset="870">
@@ -1257,8 +1231,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/tablero_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43636364" vertical-offset="0" max-vertical-offset="375">
-          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.3732504" vertical-offset="0" max-vertical-offset="643">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
