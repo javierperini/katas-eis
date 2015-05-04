@@ -46,8 +46,8 @@ describe 'Tablero' do
   end
 
   it 'disparar hasta hundir un barco y retornar un sink' do
-    @tablero.disparar_posicion(2,1)
     @tablero.disparar_posicion(2,2)
+    @tablero.disparar_posicion(2,1)
     expect(@tablero.hundi_barco?).to be true
   end
 end

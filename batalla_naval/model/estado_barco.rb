@@ -4,7 +4,9 @@ class EstadoBarco
   end
 
   def rebici_un_disparo(nro_columna,nro_fila)
-    @barco.set_fila(nro_fila)
+    if @barco.get_fila == nro_fila
+      @barco.set_fila(@fila_final)
+    end
     @barco.set_estado(Averiado.new(@barco))
   end
 

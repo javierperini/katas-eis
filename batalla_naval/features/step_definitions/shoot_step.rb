@@ -23,5 +23,5 @@ Then(/^I get hit$/) do
 end
 
 Then(/^I get sink$/) do
-  pending # express the regexp above with the code you wish you had
+  expect(@tablero.hundi_barco?).to be true
 end
