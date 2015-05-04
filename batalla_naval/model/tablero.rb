@@ -41,12 +41,6 @@ class Tablero
     columna.guardar_barco_grande_en(fila,fila+1)
   end
 
-  def crear_barco_grande(columna, fila)
-    @lista_barcos.push(BarcoGrande.new(columna,fila))
-    columna= get_columna(columna)
-    columna.guardar_barco_grande_en(fila,fila+1)
-  end
-
   def sacar_punto(nro_columna, nro_fila)
     columna= get_columna(nro_columna)
     columna.sacar_punto_fila(nro_fila)
@@ -64,6 +58,10 @@ class Tablero
 
   def es_hit?
     @disparo_actual.hit?
+  end
+
+  def es_miss?
+    @disparo_actual.miss?
   end
 
 

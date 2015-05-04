@@ -12,6 +12,10 @@ Given(/^I shoot to position “(\d+):(\d+)”$/) do |posicionX, posicionY|
   @tablero.disparar_posicion(posicionX.to_i,posicionY.to_i)
 end
 
+Then(/^I get water$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
 Then(/^I get hit$/) do
   expect(@tablero.es_hit?).to be true
 end
