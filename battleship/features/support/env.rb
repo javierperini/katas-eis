@@ -20,4 +20,4 @@ end
 
 
 #Capybara.default_driver = :selenium
-Capybara.app = NicoPaez::App.tap { |app|  }
+#Capybara.app = Battleship::App.tap { |app|  }
