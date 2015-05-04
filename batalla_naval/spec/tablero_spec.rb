@@ -3,11 +3,14 @@ require_relative '../model/tablero.rb'
 require_relative '../model/columna.rb'
 require_relative '../model/fila.rb'
 require_relative '../model/barco.rb'
+require_relative '../model/disparo.rb'
+
 
 
 describe 'Tablero' do
   before do
     @tablero= Tablero.new(5,5)
+    @tablero.crear_barco_grande(2,1)
   end
 
   it 'compruebo que la cantidad de columnas del tablero es 5' do
@@ -31,6 +34,11 @@ describe 'Tablero' do
   it 'crear un barco grande y comprobar que su posicion final esta ocupada' do
     @tablero.crear_barco_grande(5,1)
     expect(@tablero.posicion_ocupada?(5,2)).to be true
+  end
+
+  it 'disparar a una posicion y retornar un hit' do
+    @tablero.disparar_posicion(2,1)
+    expect(@tablero.es_hit?).to be true
   end
 
 end
