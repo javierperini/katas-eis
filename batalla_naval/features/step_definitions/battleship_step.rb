@@ -1,6 +1,8 @@
 require_relative '../../model/tablero.rb'
 require_relative '../../model/columna.rb'
 require_relative '../../model/fila.rb'
+require_relative '../../model/barco.rb'
+
 
 
 Given(/^a board with dimensions "([^"]*)" x "([^"]*)"$/) do |posicionX, posicionY|
@@ -9,6 +11,10 @@ end
 
 Given(/^I create a small ship in position "(\d+):(\d+)"$/) do |posicionX ,posicionY|
   @tablero.crear_barco_chico(posicionX.to_i, posicionY.to_i)
+end
+
+Given(/^I create a large ship in position "(\d+):(\d+)"$/) do |posicionX ,posicionY|
+  pending # express the regexp above with the code you wish you had
 end
 
 Then(/^position "(\d+):(\d+)" is not empty$/) do |posicionX, posicionY|
