@@ -25,3 +25,8 @@ end
 Then(/^I get sink$/) do
   expect(@tablero.hundi_barco?).to be true
 end
+
+Then(/^I get alert invalid location “(\d+):(\d+)”$/) do |posicionX, posicionY|
+  pending # express the regexp above with the code you wish you had
+end
+

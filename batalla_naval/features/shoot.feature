@@ -16,3 +16,7 @@ Feature: Shoot
     Then I get hit
     And I shoot to position “3:3”
     Then I get sink
+
+  Scenario: Shoot invalid location
+    Given I shoot to position “6:6”
+    Then I get alert invalid location “6:6”
