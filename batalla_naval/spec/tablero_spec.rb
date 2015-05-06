@@ -51,12 +51,18 @@ describe 'Tablero' do
     expect(@tablero.hundi_barco?).to be true
   end
 
-  it 'creo un barco en una posicion invalida' do
+  it 'creo un barco chico  afuera del tablero (6,6) y salta una exception' do
     expect{@tablero.crear_barco_chico(6,6)}.to raise_error
   end
 
-  it 'creo un barco en una posicion invalida' do
+  it 'creo un barco chico en una posicion invalida (0,0) y salta una exception' do
     expect{@tablero.crear_barco_chico(0,0)}.to raise_error
   end
+
+  it 'creo un barco chico en una posicion ocupada y salta una exception' do
+    expect{@tablero.crear_barco_chico(2,1)}.to raise_error
+  end
+
+
 end
 

@@ -30,7 +30,7 @@ class Tablero
   end
 
   def crear_barco_chico(columna, fila)
-    if estoy_fuera_del_tablero?(columna,fila)
+    if estoy_en_posicion_invalida?(columna,fila)
       raise "Posicion fuera del tablero"
     end
     @lista_barcos.push(BarcoChico.new(columna,fila))
@@ -38,11 +38,14 @@ class Tablero
     columna.guardar_barco_chico_en(fila)
   end
 
-  def estoy_fuera_del_tablero?(columna,fila)
-      @columnas < columna || @filas < fila  || 0 > columna || 0 > fila
+  def estoy_en_posicion_invalida?(columna,fila)
+      @columnas < columna || @filas < fila  || 0 > columna || 0 > fila  || posicion_ocupada?(columna,fila)
   end
 
     def crear_barco_grande(columna, fila)
+      if estoy_en_posicion_invalida?(columna,fila+1) || posicion_ocupada?(columna,fila+1)
+        raise "Posicion fuera del tablero"
+      end
     @lista_barcos.push(BarcoGrande.new(columna,fila))
     columna= get_columna(columna)
     columna.guardar_barco_grande_en(fila,fila+1)

@@ -9,14 +9,16 @@ Given(/^a board with dimensions "([^"]*)" x "([^"]*)"$/) do |posicionX, posicion
 end
 
 Given(/^I create a small ship in position "(\d+):(\d+)"$/) do |posicionX ,posicionY|
-  @tablero.crear_barco_chico(posicionX.to_i, posicionY.to_i)
+  begin
+    @tablero.crear_barco_chico(posicionX.to_i, posicionY.to_i)
+  rescue
+  end
 end
 
 Given(/^I create a large ship in position "(\d+):(\d+)"$/) do | posicionX ,posicionY|
   begin
     @tablero.crear_barco_grande(posicionX.to_i, posicionY.to_i)
   rescue
-
   end
 end
 
