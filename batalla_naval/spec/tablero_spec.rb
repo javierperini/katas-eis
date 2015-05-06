@@ -63,6 +63,11 @@ describe 'Tablero' do
     expect{@tablero.crear_barco_chico(2,1)}.to raise_error
   end
 
+  it 'creo un barco grande en una posicion ocupada y salta una exception' do
+    @tablero.crear_barco_grande(3,2)
+    expect{@tablero.crear_barco_grande(3,3)}.to raise_error
+  end
+
 
 end
 
