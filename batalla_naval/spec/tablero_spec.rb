@@ -50,5 +50,9 @@ describe 'Tablero' do
     @tablero.disparar_posicion(2,1)
     expect(@tablero.hundi_barco?).to be true
   end
+
+  it 'creo un barco en una posicion invalida' do
+    expect{@tablero.crear_barco_chico(6,6)}.to raise_error
+  end
 end
 

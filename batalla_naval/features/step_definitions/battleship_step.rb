@@ -20,6 +20,10 @@ Then(/^position "(\d+):(\d+)" is not empty$/) do |posicionX, posicionY|
   expect(@tablero.posicion_ocupada?(posicionX.to_i,posicionY.to_i)).to be (true)
 end
 
+Then(/^Alert invalid location$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
 
 
 
