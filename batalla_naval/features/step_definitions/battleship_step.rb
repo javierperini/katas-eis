@@ -26,8 +26,8 @@ Then(/^position "(\d+):(\d+)" is not empty$/) do |posicionX, posicionY|
   expect(@tablero.posicion_ocupada?(posicionX.to_i,posicionY.to_i)).to be (true)
 end
 
-Then(/^Alert invalid location$/) do
-  expect{@tablero.crear_barco_chico(0,0)}.to raise_error
+Then(/^Alert invalid location "(\d+):(\d+)"$/) do | posicionX ,posicionY|
+  expect{@tablero.crear_barco_chico(posicionX, posicionY)}.to raise_error
 end
 
 
