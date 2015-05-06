@@ -16,7 +16,7 @@ Given(/^I create a large ship in position "(\d+):(\d+)"$/) do | posicionX ,posic
   begin
     @tablero.crear_barco_grande(posicionX.to_i, posicionY.to_i)
   rescue
-    puts("Lanzo la expecion")
+
   end
 end
 
@@ -25,7 +25,7 @@ Then(/^position "(\d+):(\d+)" is not empty$/) do |posicionX, posicionY|
 end
 
 Then(/^Alert invalid location$/) do
-  pending # express the regexp above with the code you wish you had
+  expect{@tablero.crear_barco_chico(0,0)}.to raise_error
 end
 
 
