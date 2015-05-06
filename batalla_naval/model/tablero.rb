@@ -30,20 +30,16 @@ class Tablero
   end
 
   def crear_barco_chico(columna, fila)
-    estoy_fuera_del_tablero(columna, fila)
+    if estoy_en_posicion_invalida?(columna,fila) || posicion_ocupada?(columna,fila)
+      raise "Posicion fuera del tablero"
+    end
     @lista_barcos.push(BarcoChico.new(columna,fila))
     columna= get_columna(columna)
     columna.guardar_barco_chico_en(fila)
   end
 
-  def estoy_fuera_del_tablero(columna, fila)
-    if estoy_en_posicion_invalida?(columna, fila)
-      raise "Posicion fuera del tablero"
-    end
-  end
-
   def estoy_en_posicion_invalida?(columna,fila)
-      @columnas < columna || @filas < fila  || 0 > columna || 0 > fila  || posicion_ocupada?(columna,fila)
+      @columnas < columna || @filas < fila  || 0 > columna || 0 > fila
   end
 
   def crear_barco_grande(columna, fila)
@@ -56,7 +52,7 @@ class Tablero
   end
 
   def posicion_invalida_barco_grande?(columna, fila)
-    estoy_en_posicion_invalida?(columna, fila) || posicion_ocupada?(columna, fila+1)
+    estoy_en_posicion_invalida?(columna, fila) || posicion_ocupada?(columna, fila+1) || posicion_ocupada?(columna,fila)
   end
 
   def sacar_punto(nro_columna, nro_fila)
@@ -70,7 +66,9 @@ class Tablero
   end
 
   def disparar_posicion(nro_columna, nro_fila)
-    estoy_fuera_del_tablero(nro_columna, nro_fila)
+    if estoy_en_posicion_invalida?(nro_columna, nro_fila)
+      raise "Disparaste fuera del tablero"
+    end
     @disparo_actual= Disparo.new(self)
     @disparo_actual.dispara(nro_columna,nro_fila)
   end

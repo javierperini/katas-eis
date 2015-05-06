@@ -11,7 +11,9 @@ Given(/^a large ship in position: “(\d+):(\d+)”$/) do |posicionX, posicionY|
 end
 
 Given(/^I shoot to position “(\d+):(\d+)”$/) do |posicionX, posicionY|
+
   @tablero.disparar_posicion(posicionX.to_i,posicionY.to_i)
+
 end
 
 Then(/^I get water$/) do
@@ -27,6 +29,6 @@ Then(/^I get sink$/) do
 end
 
 Then(/^I get alert invalid location “(\d+):(\d+)”$/) do |posicionX, posicionY|
-  pending # express the regexp above with the code you wish you had
+  expect{@tablero.disparar_posicion(posicionX,posicionY)}.to raise_error
 end
 
