@@ -13,10 +13,8 @@ Background:
     And position "3:4" is not empty
 
   Scenario: Create a small ship in a invalid location
-    Given I create a small ship in position "6:6"
-    Then Alert invalid location "6:6"
+    Then I create a small ship in an invalid position "6:6" and  Alert invalid location
 
   Scenario: Create a small ship in an used location
     Given I create a small ship in position "2:2"
-    Given I create a small ship in position "2:2"
-    Then Alert invalid location "2:2"
+    Then  I create a small ship in an invalid position "2:2" and  Alert invalid location

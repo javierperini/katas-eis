@@ -9,26 +9,21 @@ Given(/^a board with dimensions "([^"]*)" x "([^"]*)"$/) do |posicionX, posicion
 end
 
 Given(/^I create a small ship in position "(\d+):(\d+)"$/) do |posicionX ,posicionY|
-  begin
-    @tablero.crear_barco_chico(posicionX.to_i, posicionY.to_i)
-  rescue
-  end
+  @tablero.crear_barco_chico(posicionX.to_i, posicionY.to_i)
 end
 
 Given(/^I create a large ship in position "(\d+):(\d+)"$/) do | posicionX ,posicionY|
-  begin
     @tablero.crear_barco_grande(posicionX.to_i, posicionY.to_i)
-  rescue
-  end
 end
 
 Then(/^position "(\d+):(\d+)" is not empty$/) do |posicionX, posicionY|
   expect(@tablero.posicion_ocupada?(posicionX.to_i,posicionY.to_i)).to be (true)
 end
 
-Then(/^Alert invalid location "(\d+):(\d+)"$/) do | posicionX ,posicionY|
+Then(/^I create a small ship in an invalid position "(\d+):(\d+)" and  Alert invalid location$/) do | posicionX ,posicionY|
   expect{@tablero.crear_barco_chico(posicionX, posicionY)}.to raise_error
 end
+
 
 
 
