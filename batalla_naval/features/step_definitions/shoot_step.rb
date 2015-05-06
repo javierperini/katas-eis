@@ -11,10 +11,7 @@ Given(/^a large ship in position: “(\d+):(\d+)”$/) do |posicionX, posicionY|
 end
 
 Given(/^I shoot to position “(\d+):(\d+)”$/) do |posicionX, posicionY|
-  begin
   @tablero.disparar_posicion(posicionX.to_i,posicionY.to_i)
-  rescue
-  end
 end
 
 Then(/^I get water$/) do

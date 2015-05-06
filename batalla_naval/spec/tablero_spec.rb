@@ -68,8 +68,9 @@ describe 'Tablero' do
     expect{@tablero.crear_barco_grande(3,3)}.to raise_error
   end
 
-  it 'disparo fuera del tablero  y salta una exception' do
-    expect{@tablero.disparar_posicion(6,6)}.to raise_error
+  it 'disparo fuera del tablero  y retorna un miss' do
+      @tablero.disparar_posicion(6,6)
+      expect(@tablero.es_miss?).to be true
   end
 end
 

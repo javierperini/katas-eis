@@ -19,4 +19,4 @@ Feature: Shoot
 
   Scenario: Shoot invalid location
     Given I shoot to position “6:6”
-    Then I get alert invalid location “6:6”
+    Then I get water

@@ -66,9 +66,6 @@ class Tablero
   end
 
   def disparar_posicion(nro_columna, nro_fila)
-    if estoy_en_posicion_invalida?(nro_columna, nro_fila)
-      raise "Disparaste fuera del tablero"
-    end
     @disparo_actual= Disparo.new(self)
     @disparo_actual.dispara(nro_columna,nro_fila)
   end
