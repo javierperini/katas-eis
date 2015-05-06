@@ -13,7 +13,11 @@ Given(/^I create a small ship in position "(\d+):(\d+)"$/) do |posicionX ,posici
 end
 
 Given(/^I create a large ship in position "(\d+):(\d+)"$/) do | posicionX ,posicionY|
-  @tablero.crear_barco_grande(posicionX.to_i, posicionY.to_i)
+  begin
+    @tablero.crear_barco_grande(posicionX.to_i, posicionY.to_i)
+  rescue
+    puts("Lanzo la expecion")
+  end
 end
 
 Then(/^position "(\d+):(\d+)" is not empty$/) do |posicionX, posicionY|

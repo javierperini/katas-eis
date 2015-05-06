@@ -39,7 +39,7 @@ class Tablero
   end
 
   def estoy_fuera_del_tablero?(columna,fila)
-      @columnas < columna || @filas < fila
+      @columnas < columna || @filas < fila  || 0 > columna || 0 > fila
   end
 
     def crear_barco_grande(columna, fila)

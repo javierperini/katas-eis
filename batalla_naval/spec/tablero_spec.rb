@@ -54,5 +54,9 @@ describe 'Tablero' do
   it 'creo un barco en una posicion invalida' do
     expect{@tablero.crear_barco_chico(6,6)}.to raise_error
   end
+
+  it 'creo un barco en una posicion invalida' do
+    expect{@tablero.crear_barco_chico(0,0)}.to raise_error
+  end
 end
 
