@@ -9,6 +9,7 @@
 # DataMapper.setup(:default, "sqlite3://" + Padrino.root('db', "development.db"))
 #
 
+=begin
 DataMapper.logger = logger
 DataMapper::Property::String.length(255)
 
@@ -19,3 +20,4 @@ case Padrino.env
   when :staging 		then DataMapper.setup(:default, ENV['DATABASE_URL'])
   when :production  then DataMapper.setup(:default, ENV['DATABASE_URL'])
 end
+=end
