@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en" ng-app="carmenApp">
+
+<head>
+    <title>¿Dónde está Carmen Sandiego?</title>
+        
+    <!-- ANGULAR -->
+    <script src="src/lib/angular.js"></script>
+    <!-- JQUERY -->
+    <script src="src/lib/jquery-1.11.1.min.js"></script>
+    <!-- BOOTSTRAP -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!-- Optional theme -->
+   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
+    
+    <!-- Controller de la app -->
+    <script src="src/js/controllers.js"></script>
+    <!-- .css propio -->
+    <link rel="stylesheet" href="src/css/app.css" />
+</head>
+
+<body>
+    <div class="container"data-ng-controller="PaisesCtrl">
+        <div class="page-header" >
+            <h1>
+               ¿Qué hacemos ahora, detective?
+            </h1>
+            <button class="btn btn-warning btn-xs" ng-click="inicioJuegoPanelShow()">
+            	Ver caso <span class="glyphicon glyphicon-search">
+            </button>
+            <div class="well well-lg centrar " ng-hide="inicioJuegoShow" >
+            	<span class="textoCaso" ng-bind="inicioDeCasoTexto"></span>
+            </div>
+       </div>
+       <div class="container well well-lg">
+	       <div class="paisActualPanel centrar" >Estás en 
+	            <span class="paisActual" ng-bind="paisActual.nombre"></span>
+	        </div>
+	        <br/>
+	        <br/>
+        	<div class="row">
+        		<div class="col-md-3"  >
+        			<table class="table">
+	                    <thead>
+	                        <tr><th class="tituloColumna">Visitados</th></tr>
+	                    </thead>
+	                    <tbody>
+	                        <tr data-ng-repeat="pais in paisesVisitados">
+	                            <td><span class="glyphicon glyphicon-plane colorItems"></span> {{pais.nombre}}</td>
+	                       </tr>
+	                    </tbody>
+	                </table>
+	                <table class="table">
+	                    <thead>
+	                        <tr><th class="tituloColumna">Fallidos</th></tr>
+	                    </thead>
+	                    <tbody>
+	                        <tr data-ng-repeat="pais in paisesFallidos">
+	                            <td><span class="glyphicon glyphicon-plane colorItems"></span> {{pais.nombre}}</td> <!-- cambiar color -->
+	                        </tr>
+	                    </tbody>
+	                </table>
+	                <select class="input-large" ng-model="paisSeleccionado">
+	                    <option ng-repeat="pais in paisesSistema">{{pais.nombre}}</option>
+	                </select>
+	                &nbsp;
+	                <button type="button" class="btn btn-primary centrar" ng-disabled="!puedeViajar()" data-ng-click="viajar()">Viajar</button>
+	                <br/>
+	                <br/>
+	                <button type="button" class="btn btn-primary" ng-disabled="esPrimerPais()" data-ng-click="volverPaisAnterior()" >Volver a país anterior</button>
+	        	</div>
+	        	<div class="col-md-6">
+	        		<div class="tituloColumna">Lugares</div>
+                	<br/>
+                	<div class="centrar">
+	                    <span ng-repeat="lugar in paisActual.lugares">
+	                        <button type="button" class="btn btn-danger" ng-click="pedirPista(lugar.nombre)">
+	                            {{lugar.nombre}}
+	                        </button>
+	                    </span>
+	                    <br/>
+	                    <br/>
+		                <div class="well well-pista" ng-show="pistaShow">
+		                	<br/>
+		                    <label ng-bind="pistaLugar" class="centrar" >
+		                    	<br/>
+		                    <!-- 	<button class="btn btn-warning" ng-click="abrirJuegoFinal()" ng-show="mostrarBotonFinal">Continuar</button> -->
+		                    </span>
+	                		<span class="glyphicon glyphicon-remove-circle" ng-click="ocultarPista()"></span>
+		                </div> 
+		                <div id="finalJuegoModal" class="modal fade" role="dialog">
+							<div class="modal-dialog">
+						        <div class="modal-content">
+									<div class="modal-header h1">
+<!-- 										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button> -->
+										Encontraste al villano!
+									</div>	
+									<div class="modal-body">
+										<span ng-bind="finalJuego"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+                	</div>
+	        	</div>
+	        	<div class="col-md-3" data-ng-controller="VillanosCtrl">
+	        		<div class="tituloColumna">Orden de arresto</div>
+	        		<div id="ordenPanel">
+                        Emitida <span class="glyphicon glyphicon-remove colorItems" ng-hide="emitida()"></span>
+	                    <span id="panelVillanoOrden" ng-hide="!emitida()">
+	                        contra: 
+	                        <br/>
+	                        <span class="glyphicon glyphicon-user"></span>
+	                        <span ng-bind="villanoOrdenEmitida"></span>
+	                    </span>
+                	</div>
+                	<br/>
+	                <select class="input-large" ng-model="villanoOrden">
+	                    <option ng-repeat="villano in villanos">{{villano.nombre}}</option>
+	                </select>
+	                &nbsp;
+	                <button type="button" class="btn btn-primary" ng-click="emitirOrden()" ng-disabled="!puedeEmitirOrden()">
+	                    Emitir orden
+	                </button>
+	                <br/>
+	                <br/>
+	                <div class="centrar">
+	                    <button type="button" class="btn btn-warning" ng-click="showPanelFichas()">
+	                        Ver fichas
+	                    </button>
+	                    <br/>
+	                    <br/>
+	                    <div class="well well-lg costado" data-ng-repeat="villano in villanos" ng-show="panelFichas">
+	                        <span class="tituloColumna">
+	                        	<span class="glyphicon glyphicon-user">
+	                        	</span> {{villano.nombre}} <br/></span>
+	                        {{villano.sexo}}<br/>                           
+	                         <span data-ng-repeat="hobbie in villano.hobbies" >{{hobbie.pista}} <br/></span>
+	                         <span data-ng-repeat="hobbie in villano.seniasParticulares" >{{hobbie.pista}} <br/></span> 
+	                       <br/>
+	                    </div>
+                	</div>
+	        	</div>
+        	</div>
+        </div>
+    </div>	
+</body>
+</html>

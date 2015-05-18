@@ -1,0 +1,52 @@
+body {
+	background-image: url("../lib/detective.jpg");
+}
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    color: #d31515;
+}
+.paisActualPanel{
+    font-size: 25px;
+    font-weight: bold;
+}
+.paisActual {
+     /*font-style: italic; */
+    font-weight: bold;
+}
+.textoCaso {
+    font-weight: bold;
+}
+.botonLugar {
+    width: 100px;
+}
+.oculto {
+    display: none;
+}
+.centrar{
+    text-align: center;
+}
+.colorItems{
+    color: #d31515;
+}
+.tituloColumna{
+    text-align: center;
+    font-weight: bold;
+}
+
+.costado{
+	text-align:left;
+}
+.well{
+	background-color: rgba(245, 245, 245, 0.5);
+}
+.well-pista{
+	font-weight: bold;
+	background-color: rgba(15, 91, 171, 0.4);
+}
+.glyphicon-remove-circle{
+	font-size: 15px;
+	color: #FFFFFF;
+	text-align:right;
+}
