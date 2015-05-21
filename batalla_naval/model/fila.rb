@@ -12,10 +12,7 @@ class Fila
   end
 
   def sacar
-    if(@ocupada && true)
-      return 1
-    end
-    0
+    @ocupada= @ocupada && false
   end
 
 end

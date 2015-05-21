@@ -12,7 +12,6 @@ describe 'Disparo' do
     tablero= Tablero.new(5,5)
     tablero.crear_barco_grande(2,1)
     @disparo= Disparo.new(tablero)
-
   end
 
   it 'Creo el un disparo y compruebo que sink es falso' do
