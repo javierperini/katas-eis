@@ -51,6 +51,10 @@ class BarcoGrande<Barco
     @estado= estado_barco
   end
 
+  def get_estado()
+    @estado
+  end
+
   def estas_en?(nro_columna, nro_fila)
     @columna == nro_columna && @fila ==nro_fila || @fila_final==nro_fila
   end

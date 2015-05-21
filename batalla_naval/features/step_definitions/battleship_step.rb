@@ -5,6 +5,7 @@ require_relative '../../model/barco.rb'
 
 
 Given(/^a board with dimensions "([^"]*)" x "([^"]*)"$/) do |posicionX, posicionY|
+  visit '/mipagina'
   @tablero= Tablero.new(posicionX.to_i, posicionY.to_i)
 end
 
