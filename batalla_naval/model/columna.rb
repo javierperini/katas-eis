@@ -15,6 +15,10 @@ class Columna
     @lista_filas[nro_fila]
   end
 
+  def get_filas
+    @lista_filas.length-1
+  end
+
   def guardar_barco_chico_en(fila)
      get_fila(fila).guardar_barco
   end
