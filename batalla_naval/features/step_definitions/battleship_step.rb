@@ -29,7 +29,9 @@ Then(/^position "(\d+):(\d+)" is not empty$/) do |posicionX, posicionY|
 end
 
 Then(/^I create a small ship in an invalid position "(\d+):(\d+)" and  Alert invalid location$/) do | posicionX ,posicionY|
-  expect{@tablero.crear_barco_chico(posicionX, posicionY)}.to raise_error
+  fill_in(:posX, :with => posicionX)
+  fill_in(:posY, :with => posicionY)
+  expect{  click_button "boton_enviar" }.to raise_error
 end
 
 
