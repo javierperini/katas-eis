@@ -20,14 +20,22 @@
       <input type="text" name="tableroY" />
       <input type="submit" value="crearTablero" id="boton_tablero"/>
     </form>
-
+    </br>
     <form method="POST" action="crearBarco">
 		 <%= csrf_token_field %>
-		 Poner barco en el tablero con coordenadas:
+		 Poner barco chico en el tablero con coordenadas:
 		<input type="text" name="posX" />
         <input type="text" name="posY" />
-		<input type="submit" value="crearBarco" id="boton_enviar"/>
+		<input type="submit" value="crearBarcoChico" id="boton_enviar"/>
 	</form>
+    </br>
+    <form method="POST" action="crearBarcoGrande">
+      <%= csrf_token_field %>
+      Poner barco grande en el tablero con coordenadas:
+      <input type="text" name="gran_posX" />
+      <input type="text" name="gran_posY" />
+      <input type="submit" value="crearBarcoGrande" id="boton_barco_grande"/>
+    </form>
 
 	</body>
 </html>

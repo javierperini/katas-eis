@@ -18,7 +18,9 @@ Given(/^I create a small ship in position "(\d+):(\d+)"$/) do |posicionX ,posici
 end
 
 Given(/^I create a large ship in position "(\d+):(\d+)"$/) do | posicionX ,posicionY|
-    @tablero.crear_barco_grande(posicionX.to_i, posicionY.to_i)
+  fill_in(:gran_posX, :with => posicionX)
+  fill_in(:gran_posY, :with => posicionY)
+  click_button "boton_barco_grande"
 end
 
 Then(/^position "(\d+):(\d+)" is not empty$/) do |posicionX, posicionY|

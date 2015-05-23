@@ -9,7 +9,6 @@ require_relative '../model/estado_barco.rb'
 describe 'Tablero' do
   before do
     @tablero= Tablero.new(5,5)
-    @prueba= Tablero.new(100,100)
     @tablero.crear_barco_grande(2,1)
   end
 

@@ -34,7 +34,16 @@ module Battleship
     post 'crearBarco' do
       @tablero= session[:object]
       @tablero.crear_barco_chico(params[:posX].to_i,params[:posY].to_i)
-      @posicion = "(" +params[:posX].to_s+", "+params[:posY].to_s+")"
+      @posicion = "(" +params[:posX]+", "+params[:posY]+")"
+      actualizar(@tablero)
+      render 'batalla/inicio'
+    end
+
+    post 'crearBarcoGrande' do
+      @tablero= session[:object]
+      @tablero.crear_barco_grande(params[:gran_posX].to_i,params[:gran_posY].to_i)
+      @siguiente= (params[:gran_posY].to_i + 1).to_s
+      @posicion = "(" +params[:gran_posY]+", "+params[:gran_posY]+ ") (" +params[:gran_posY]+", "+@siguiente+ ")"
       actualizar(@tablero)
       render 'batalla/inicio'
     end
