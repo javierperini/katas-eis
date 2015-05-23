@@ -20,10 +20,14 @@ module Battleship
       render 'batalla/inicio'
     end
 
+    def actualizar(tablero)
+      session[:object] = tablero
+      @tablero_tamanio = "(" +tablero.get_columnas.to_s+", "+tablero.get_nro_filas.to_s+")"
+    end
+
     post 'crearTablero' do
       @tablero= Tablero.new(params[:tableroX].to_i,params[:tableroY].to_i)
-      session[:object] = @tablero
-      @tablero_tamanio = "(" +@tablero.get_columnas.to_s+", "+@tablero.get_nro_filas.to_s+")"
+      actualizar(@tablero)
       render 'batalla/inicio'
     end
 
@@ -31,7 +35,7 @@ module Battleship
       @tablero= session[:object]
       @tablero.crear_barco_chico(params[:posX].to_i,params[:posY].to_i)
       @posicion = "(" +params[:posX].to_s+", "+params[:posY].to_s+")"
-      @tablero_tamanio = "(" +@tablero.get_columnas.to_s+", "+@tablero.get_nro_filas.to_s+")"
+      actualizar(@tablero)
       render 'batalla/inicio'
     end
   end
