@@ -4,18 +4,29 @@
 	<head>
     <meta charset="utf-8">
 	</head>
-	<body>
+    <body>
 
-	<h1>Hola</h1>
+	<h1>Batalla Naval</h1>
 
-	<p>El parametro nombre vale: <%= @nombre %></p>
-	
+    <p>Tu tablero tiene tamanio: <%= @tablero_tamanio %></p>
+    <p>Posicion de barco Actual es: <%= @posicion %></p>
 
-	<form method="POST" action="mipagina">
+
+
+    <form method="POST" action="crearTablero">
+      <%= csrf_token_field %>
+      Poner el tamanio del tablero:
+      <input type="text" name="tableroX" />
+      <input type="text" name="tableroY" />
+      <input type="submit" value="crearTablero" id="boton_tablero"/>
+    </form>
+
+    <form method="POST" action="crearBarco">
 		 <%= csrf_token_field %>
-		 Establecer nuevo valor para nombre:
-		<input type="text" name="nombre" />
-		<input type="submit" value="enviar" id="boton_enviar"/>
+		 Poner barco en el tablero con coordenadas:
+		<input type="text" name="posX" />
+        <input type="text" name="posY" />
+		<input type="submit" value="crearBarco" id="boton_enviar"/>
 	</form>
 
 	</body>

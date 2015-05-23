@@ -6,11 +6,15 @@ require_relative '../../model/barco.rb'
 
 Given(/^a board with dimensions "([^"]*)" x "([^"]*)"$/) do |posicionX, posicionY|
   visit '/mipagina'
-  @tablero= Tablero.new(posicionX.to_i, posicionY.to_i)
+  fill_in(:tableroX, :with => posicionX)
+  fill_in(:tableroY, :with => posicionY)
+  click_button "boton_tablero"
 end
 
 Given(/^I create a small ship in position "(\d+):(\d+)"$/) do |posicionX ,posicionY|
-  @tablero.crear_barco_chico(posicionX.to_i, posicionY.to_i)
+  fill_in(:posX, :with => posicionX)
+  fill_in(:posY, :with => posicionY)
+  click_button "boton_enviar"
 end
 
 Given(/^I create a large ship in position "(\d+):(\d+)"$/) do | posicionX ,posicionY|
@@ -18,7 +22,8 @@ Given(/^I create a large ship in position "(\d+):(\d+)"$/) do | posicionX ,posic
 end
 
 Then(/^position "(\d+):(\d+)" is not empty$/) do |posicionX, posicionY|
-  expect(@tablero.posicion_ocupada?(posicionX.to_i,posicionY.to_i)).to be (true)
+  expect(page.has_content?(posicionX)).to eq true
+  expect(page.has_content?(posicionY)).to eq true
 end
 
 Then(/^I create a small ship in an invalid position "(\d+):(\d+)" and  Alert invalid location$/) do | posicionX ,posicionY|

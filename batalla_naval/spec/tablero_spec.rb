@@ -9,6 +9,7 @@ require_relative '../model/estado_barco.rb'
 describe 'Tablero' do
   before do
     @tablero= Tablero.new(5,5)
+    @prueba= Tablero.new(100,100)
     @tablero.crear_barco_grande(2,1)
   end
 
@@ -17,7 +18,7 @@ describe 'Tablero' do
   end
 
   it 'compruebo que la cantidad de filas del tablero es 5' do
-    expect(@tablero.get_filas).to eq 5
+    expect(@tablero.get_nro_filas).to eq 5
   end
 
   it 'crear un barco chico y comprobar que una posicion esta ocupada' do

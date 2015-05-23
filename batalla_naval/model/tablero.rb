@@ -21,7 +21,7 @@ class Tablero
     @columnas
   end
 
-  def get_filas
+  def get_nro_filas
     @filas
   end
 
