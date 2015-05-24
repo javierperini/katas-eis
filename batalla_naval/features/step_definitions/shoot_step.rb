@@ -27,8 +27,7 @@ Then(/^I get hit$/) do
 end
 
 Then(/^I get sink$/) do
-  pending
-  #expect(@tablero.hundi_barco?).to be true
+  expect(page.has_content?("SINK")).to eq true
 end
 
 Then(/^I get alert invalid location “(\d+):(\d+)”$/) do |posicionX, posicionY|
