@@ -31,7 +31,8 @@ Then(/^I get sink$/) do
 end
 
 Then(/^I get alert invalid location “(\d+):(\d+)”$/) do |posicionX, posicionY|
-  pending
-  #expect{@tablero.disparar_posicion(posicionX,posicionY)}.to raise_error
+  fill_in(:shoot_X, :with => posicionX)
+  fill_in(:shoot_Y, :with => posicionY)
+  expect(click_button "boton_disparo").to raise_error
 end
 
