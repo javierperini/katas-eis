@@ -19,8 +19,7 @@ Given(/^I shoot to position “(\d+):(\d+)”$/) do |posicionX, posicionY|
 end
 
 Then(/^I get water$/) do
-  pending
-  #expect(@tablero.es_miss?).to be true
+  expect(page.has_content?("MISS")).to eq true
 end
 
 Then(/^I get hit$/) do
