@@ -38,12 +38,19 @@ module Battleship
       actualizar(@tablero)
       render 'batalla/inicio'
     end
-
+''
     post 'crearBarcoGrande' do
       @tablero= session[:object]
       @tablero.crear_barco_grande(params[:gran_posX].to_i,params[:gran_posY].to_i)
       @siguiente= (params[:gran_posY].to_i + 1).to_s
       @posicion = "(" +params[:gran_posY]+", "+params[:gran_posY]+ ") (" +params[:gran_posY]+", "+@siguiente+ ")"
+      actualizar(@tablero)
+      render 'batalla/inicio'
+    end
+
+    post 'disparar' do
+      @tablero= session[:object]
+      @disparo= @tablero.disparar_posicion(params[:shoot_X].to_i,params[:shoot_Y].to_i)
       actualizar(@tablero)
       render 'batalla/inicio'
     end

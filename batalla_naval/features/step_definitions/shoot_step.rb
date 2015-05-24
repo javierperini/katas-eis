@@ -7,13 +7,15 @@ require_relative '../../model/estado_barco.rb'
 
 
 Given(/^a large ship in position: “(\d+):(\d+)”$/) do |posicionX, posicionY|
-  #@tablero.crear_barco_grande(posicionX.to_i, posicionY.to_i)
-  pending
+  fill_in(:gran_posX, :with => posicionX)
+  fill_in(:gran_posY, :with => posicionY)
+  click_button "boton_barco_grande"
 end
 
 Given(/^I shoot to position “(\d+):(\d+)”$/) do |posicionX, posicionY|
-  pending
-  #@tablero.disparar_posicion(posicionX.to_i,posicionY.to_i)
+  fill_in(:shoot_X, :with => posicionX)
+  fill_in(:shoot_Y, :with => posicionY)
+  click_button "boton_disparo"
 end
 
 Then(/^I get water$/) do
@@ -22,8 +24,7 @@ Then(/^I get water$/) do
 end
 
 Then(/^I get hit$/) do
-  pending
-  #expect(@tablero.es_hit?).to be true
+  expect(page.has_content?("HIT")).to eq true
 end
 
 Then(/^I get sink$/) do

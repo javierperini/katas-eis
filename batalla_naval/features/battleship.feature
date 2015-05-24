@@ -15,8 +15,8 @@ Background:
   Scenario: Create a small ship in a invalid location
     Then I create a small ship in an invalid position "6:6" and  Alert invalid location
 
- # Scenario: Create a small ship in an used location
- #   Given I create a small ship in position "2:2"
- #   Then  I create a small ship in an invalid position "2:2" and  Alert invalid location
+  Scenario: Create a small ship in an used location
+    Given I create a small ship in position "2:2"
+    Then  I create a small ship in an invalid position "2:2" and  Alert invalid location
 
 

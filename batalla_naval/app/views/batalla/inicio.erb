@@ -10,8 +10,7 @@
 
     <p>Tu tablero tiene tamanio: <%= @tablero_tamanio %></p>
     <p>Posicion de barco Actual es: <%= @posicion %></p>
-
-
+    <p>Tu disparo fue: <%= @disparo %></p>
 
     <form method="POST" action="crearTablero">
       <%= csrf_token_field %>
@@ -35,6 +34,14 @@
       <input type="text" name="gran_posX" />
       <input type="text" name="gran_posY" />
       <input type="submit" value="crearBarcoGrande" id="boton_barco_grande"/>
+    </form>
+    </br>
+    <form method="POST" action="disparar">
+      <%= csrf_token_field %>
+      Disparar en :
+      <input type="text" name="shoot_X" />
+      <input type="text" name="shoot_Y" />
+      <input type="submit" value="disparar" id="boton_disparo"/>
     </form>
 
 	</body>

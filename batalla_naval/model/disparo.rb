@@ -5,6 +5,7 @@ class Disparo
     @hit= false
     @miss= false
     @sink=false
+    @estado ="MISS"
   end
 
   def dispara(nro_columna,nro_fila)
@@ -18,6 +19,16 @@ class Disparo
     @hit=true
     @sink= barco.me_hundieron?
     @tablero.sacar_punto(nro_columna, nro_fila)
+  end
+
+  def estado
+    if hit?
+      @estado="HIT"
+    end
+    if sink?
+      @estado="SINK"
+    end
+    @estado
   end
 
   def hit?

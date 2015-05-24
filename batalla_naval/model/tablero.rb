@@ -68,6 +68,7 @@ class Tablero
   def disparar_posicion(nro_columna, nro_fila)
     @disparo_actual= Disparo.new(self)
     @disparo_actual.dispara(nro_columna,nro_fila)
+    @disparo_actual.estado
   end
 
   def es_hit?
