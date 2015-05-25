@@ -5,7 +5,7 @@ require_relative '../../model/barco.rb'
 
 
 Given(/^a board with dimensions "([^"]*)" x "([^"]*)"$/) do |posicionX, posicionY|
-  visit '/mipagina'
+  visit '/'
   fill_in(:tableroX, :with => posicionX)
   fill_in(:tableroY, :with => posicionY)
   click_button "boton_tablero"

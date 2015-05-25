@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+
+<h1>Batalla Naval- Crea Tablero</h1>
+<form method="POST" action="crearTablero">
+  <%= csrf_token_field %>
+  Poner el tamanio del tablero:
+  <input type="text" name="tableroX" />
+  <input type="text" name="tableroY" />
+  <input type="submit" value="crearTablero" id="boton_tablero"/>
+</form>
+
+</body>
+</html>
